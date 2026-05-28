@@ -90,7 +90,13 @@ body::before {
       -ms-touch-action: pan-y;
     }
 
-
+   @media (max-width: 900px) {
+      html, body {
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        touch-action: pan-y;
+      }
     
 body::after {
   content: "";
