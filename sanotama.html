@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Responsive Image Grid</title>
 
   <style>
@@ -16,11 +16,13 @@
       overflow-x: hidden;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
+      touch-action: pan-y;
+      -ms-touch-action: pan-y;
       height: 100%;
       font-family: courier, helvetica;
     }
 
-
+    
     .submit-link {
       color: #000000;
       text-decoration: none;
@@ -223,3 +225,5 @@ z-index: -1;
 <img src="5670.png" alt="santamo" style="width: 1000px; height: 400px;" class="bg-image" style="position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); width: 300px;">
 <img src="5671.png" alt="santamo" style="width: 600px; height: 440px;" class="bg-image2">
 
+</body>
+</html>
