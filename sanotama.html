@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Grid</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .submit-link {
+      color: #000000;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-right: 12px;
+    }
+
+    .submit-link:hover {
+      color: #0004ff;
+      text-decoration: underline;
+    }
+    
+    html, body {
+  overflow-x: hidden;
+
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  
+  background: url("background.png") center/cover no-repeat;
+  z-index: -1;
+}
+
+    body {
+      font-family: courier, helvetica;
+    }
+
+      .bg-image {
+      position: absolute;
+      top: -9px;
+      left: 64%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 150px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    
+      .bg-image2 {
+      position: absolute;
+      top: 300px;
+      left: 96%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 150px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+         .bg-image3 {
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 150px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    
+
+    
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 50px;          
+  height: 100%;     
+background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(183, 183, 183));  
+z-index: -1;
+}
+
+.top-strip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background: white;
+  z-index: 2000;
+  
+    border: 3px solid rgb(211, 211, 211);
+}
+
+.strip-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.strip-track img {
+  height: 100px;
+  width: auto;
+  margin-right: px;
+}
+
+.content-box2 {
+  position: fixed;
+  bottom: 250px;
+  left: 50px;      
+
+  background: rgb(238, 238, 238);
+  padding: 1px;
+  width: 340px;
+
+  border: 3px solid #ccc;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+  line-height: 1.6;
+}
+
+.content-box {
+  position: fixed;
+  bottom: 100px;
+  left: 50px;      
+
+  background: white;
+  padding: 24px;
+  width: 340px;
+
+  border: 3px solid #ccc;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+  line-height: 1.6;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+ 
+
+</style>
+</html>
+<body>
+
+
+
+    <span> .......................................></span>
+    <div </div> 
+    <span> .........></span>
+    <img src="5678.png" alt="santamo" style="width: 500px; height: 400px;" class="bg-image3">
+<div></div>
+
+  <div class="top-line">
+    <span>||||</span>
+  <div class="top-strip">
+  <div class="strip-track">
+    <img src="aon.jpg">
+    <img src="sov.jpg">
+    <img src="sov2.jpg">
+    <img src="sov3.jpg">
+    <img src="dvowr1.jpg">
+    <img src="dvowr2.jpg">
+    <img src="tmog.jpg">
+
+     <img src="aon.jpg">
+    <img src="sov.jpg">
+    <img src="sov2.jpg">
+    <img src="sov3.jpg">
+    <img src="dvowr1.jpg">
+    <img src="dvowr2.jpg">
+    <img src="tmog.jpg">
+    
+    
+   
+  </div>
+</div>
+<div class="content-box2">
+ <a href="./main.html" class="submit-link"> photos</a>
+   <a href="./submit.html" class="submit-link">submit</a>
+   <a href="./youlightupmylife.html" class="submit-link">info</a>
+   <a href="https://sanatoma.atabook.org/?page=1" class="submit-link">comments</a>
+   </div>
+   <div> ______   _______</div>
+<span> .....<</span>
+
+<div> </div>
+<div class="content-box">
+<span> Hello, welcome to sanotama.net</span><div></div>
+<span> 我不会说中文，但谁不喜欢使用斜体字这种特权呢</span>
+</div>
+
+<img src="5670.png" alt="santamo" style="width: 1000px; height: 400px;" class="bg-image" style="position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); width: 300px;">
+<img src="5671.png" alt="santamo" style="width: 600px; height: 440px;" class="bg-image2">

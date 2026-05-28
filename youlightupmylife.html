@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Grid</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+    .submit-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.submit-link:hover {
+  color: #0008ff;
+  text-decoration: underline;
+}
+
+    body {
+      font-family:  courier, helvetica;
+      
+    }
+
+    body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  
+  background: url("background.png") center/cover no-repeat;
+  z-index: -1;
+}
+
+    .top-line {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 40px;
+      background: rgb(195, 195, 195);
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 0 10px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .content-box {
+  background: white;
+  padding: 20px;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 800px;
+
+  border: 3px solid #ccc;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+  line-height: 1.6;
+}
+
+
+
+    @media (max-width: 1000px) {
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  
+  <div class="top-line">
+   <a href="./submit.html" class="submit-link"> <-- </a>
+<a href="./main.html" class="submit-link"> --> </a>
+  </div>
+<div class="content-box">
+  <span> ----------------------------------------------</span>
+  <div></div>
+  <span><b>Hello ;- )</b> The point of this website is to showcase the most cutty pieces, spots, ect. </span>
+  <div></div>
+  <span> every photo is reviewed by a human b4 being uploaded. These photos will be mostly permanent additions to this website, acting as an archive aswell. <b>I prioritize anonymity</b>.  </span>
+  <div></div>
+  <span> This website is purely a passion project from one person and is recieving regular updates.</span><div></div> <span>this around is greatly appreciated aswell as submissions.</span>
+  <div></div>
+  <div>.</div>
+  <div>.</div>
+  <span>feel free to <b>contact</b> at <a href="mailto:sanotama@protonmail.com">sanotama@protonmail.com</a> or leave a comment in the <a href="https://sanatoma.atabook.org/?page=1">comments</a>.</span>
+  <div></div>
+  <span>If you're worried about confidentiality I recommend creating a protonmail or a temporary email address. All emails are also wiped after being reviwed.</span>
+</div>
+</body>
+</html>

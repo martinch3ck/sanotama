@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Grid</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+     html, body {
+  overflow-x: hidden;
+
+}
+
+
+    .submit-link {
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-right: 12px;
+    }
+
+    .submit-link:hover {
+      color: #0022ff;
+      text-decoration: underline;
+    }
+    
+
+    body {
+      font-family: courier, helvetica;
+    }
+
+    body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  
+  background: url("background.png") center/cover no-repeat;
+  z-index: -1;
+}
+
+    .top-line {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 40px;
+      background: rgb(195, 195, 195);
+      z-index: 1000;
+      border-bottom: 3px solid rgb(170, 170, 170);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 0 10px;
+      position: relative;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-auto-rows: auto;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid rgb(188, 188, 188);
+      border-radius: 1px;
+      transition: transform 0s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .bg-image {
+      position: absolute;
+      top: -95px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 150px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .top-line span,
+    .top-line a,
+    .top-line img:not(.bg-image) {
+      position: relative;
+      z-index: 1;
+    }
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 20px;          
+  height: 100%;     
+background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(71, 71, 71));  
+z-index: -1;
+}
+
+    @media (max-width: 1000px) {
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .lightbox.visible {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 95%;
+      border: 3px solid #8a8a8a;
+      box-shadow: 0 5px 60px rgb(147, 147, 147);
+    }
+
+    .content-box {
+  display: none;
+  background: white;
+  padding: 10px;
+  width: 100%; 
+  margin: 0;
+
+  border-top: 2px solid #ccc;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+
+  line-height: 1.6;
+}
+
+.gallery-item.active .content-box {
+overflow: visible;
+}
+
+.caption {
+  position: absolute;
+  transform: translateX(-0%) translateY(0px);
+
+  padding: 6px 10px;
+  font-size: 13px;
+  color: rgb(54, 54, 54);
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 4px rgba(255, 255, 255, 0.2);
+  background: rgb(204, 204, 204); width: 150px; height: 25px;
+  padding: 4px 4px;
+  right: -0px;
+  top: -50px;
+  opacity: 1;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+
+.gallery-item:hover .caption {
+  opacity: 1;
+  transform: translateX(1%) translateY(50px);
+}
+
+  </style>
+  <script></script>
+</head>
+<body>
+  
+  <div class="top-line">
+    <img src="5641.png" alt="santamo" class="bg-image" margin-top: 0px;">
+<a href="./sanotama.html" class="submit-link"> <img src="5669.png" alt="sanotama" style="width: 100px; height: 50px; top: 0; margin-top: 2px;"></a>
+    <a href="./youlightupmylife.html" class="submit-link">info</a>
+   <a href="./submit.html" class="submit-link">submit</a>
+   <span> ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</span>
+      
+  </div>
+
+  <div class="container">
+    <div class="gallery">
+
+           <div class="gallery-item">
+  <img src="dvowr1.jpg" alt="Image 1">
+  <div class="caption"><span>dvowr</span></div>
+</div>
+     <div class="gallery-item">
+  <img src="PICT0192.jpg" alt="Image 1">
+  <div class="caption"><span>aonik</span></div>
+</div>
+     <div class="gallery-item">
+  <img src="sov.jpg" alt="Image 1">
+  <div class="caption"><span></span></div>
+</div>
+     <div class="gallery-item">
+  <img src="sov2.jpg" alt="Image 1">
+  <div class="caption"><span>soviet</span></div>
+</div>
+
+<div class="gallery-item">
+  <img src="sov3.jpg" alt="Image 1">
+  <div class="caption"><span> soviet</span></div>
+</div>
+
+<div class="gallery-item">
+  <img src="aon.jpg" alt="Image 1">
+  <div class="caption"><span>sovi aonik</span></div>
+</div>
+
+<div class="gallery-item">
+  <img src="dvowr2.jpg" alt="Image 1">
+  <div class="caption"><span>dvowr</span></div>
+</div>
+
+<div class="gallery-item">
+  <img src="tmog.jpg" alt="Image 1">
+  <div class="caption"><span>tape tmog </span></div>
+</div>
+
+   
+</div>
+</div>
+
+
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <img id="lightboxImg" src="" alt="Expanded image">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('visible');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('visible');
+      lightboxImg.src = '';
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('visible')) {
+        lightbox.classList.remove('visible');
+        lightboxImg.src = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
