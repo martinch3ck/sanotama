@@ -24,9 +24,13 @@
       text-decoration: underline;
     }
     
+    html, body {
+  overflow-x: hidden;
+
+}
+
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 body::before {
@@ -75,7 +79,8 @@ body::before {
       z-index: 0;
       pointer-events: none;
     }
-    
+
+
 body::after {
   content: "";
   position: fixed;
@@ -151,44 +156,31 @@ z-index: -1;
   }
 }
 
+    @media (max-width: 600px) {
 
-@media (max-width: 600px) {
-
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
+  .content-box,
+  .content-box2 {
+    width: 340px; 
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .bg-image3 {
-    width: 85vw;
-    margin: 10px auto;
+    width: 90vw; 
+    height: auto;  
   }
 
-  .content-box2 {
-    width: 90vw;
-    margin: 5px 0;
+  .bg-image,
+  .bg-image2 {
+    width: 80vw;
+    height: auto;
   }
 
-  .content-box {
-    width: 90vw;
-    margin: 5px 0;
-    padding: 16px;
-  }
-
-  .top-strip {
-    position: relative;
-    height: 70px;
-  }
-
-  .strip-track img {
-    height: 70px;
+  body {
+    overflow-y: auto;
   }
 }
- 
-
+    
 </style>
 </html>
 <body>
