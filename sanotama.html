@@ -24,12 +24,13 @@
       text-decoration: underline;
     }
     
+    html, body {
+  overflow-x: hidden;
 
 }
 
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 body::before {
@@ -79,9 +80,7 @@ body::before {
       pointer-events: none;
     }
 
-    
 
-    
 body::after {
   content: "";
   position: fixed;
@@ -158,11 +157,29 @@ z-index: -1;
 }
 
     @media (max-width: 600px) {
-  body {
-    transform: scale(0.75);
-    transform-origin: top left;
-    width: 133.33%;
+
+  .content-box,
+  .content-box2 {
+    width: 340px; 
+    left: 50%;
+    transform: translateX(-50%);
   }
+
+  .bg-image3 {
+    width: 90vw; 
+    height: auto;  
+  }
+
+  .bg-image,
+  .bg-image2 {
+    width: 80vw;
+    height: auto;
+  }
+
+  body {
+    overflow-y: auto;
+  }
+}
     
 </style>
 </html>
