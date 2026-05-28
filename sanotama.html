@@ -6,7 +6,7 @@
   <title>Responsive Image Grid</title>
 
   <style>
-   * {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -80,9 +80,6 @@ body::before {
       z-index: 0;
       pointer-events: none;
     }
-
-    
-
     
 body::after {
   content: "";
@@ -162,38 +159,53 @@ z-index: -1;
 
   @media (max-width: 900px) {
     html, body {
-      overflow: auto;
-      height: auto;
+      height: 100vh;
+      overflow: hidden;
     }
-
-    .content-box,
-    .content-box2 {
-      position: static;
-      width: calc(100% - 32px);
-      margin: 12px auto;
-      left: auto;
-      bottom: auto;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
-      padding: 12px;
-      border-radius: 8px;
-    }
-
-    .top-strip {
-      height: 72px;
-      border-top: 0;
-      border-bottom: 3px solid rgb(211,211,211);
-      bottom: 0;
-    }
-
-    .strip-track img {
-      height: 72px;
-    }
-
 
     .bg-image,
     .bg-image2,
     .bg-image3 {
       display: none;
+    }
+
+    .top-strip {
+      height: 56px;
+      bottom: 0;
+      border-top: 0;
+      border-bottom: 3px solid rgb(211,211,211);
+    }
+    .strip-track img {
+      height: 48px;
+    }
+
+    .content-box2 {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 32px);
+      height: 18vh;
+      padding: 8px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.95);
+    }
+
+    .content-box {
+      position: absolute;
+      top: calc(8px + 18vh + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 32px);
+      /* compute height so the box fits between top boxes and bottom strip */
+      height: calc(100vh - 18vh - 56px - 32px);
+      padding: 12px;
+      overflow: auto; /* internal scroll if content is long */
+      border-radius: 8px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.98);
     }
 
     .submit-link {
