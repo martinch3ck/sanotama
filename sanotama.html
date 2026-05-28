@@ -28,6 +28,7 @@
 
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 body::before {
@@ -155,53 +156,40 @@ z-index: -1;
   }
 }
 
+
 @media (max-width: 600px) {
 
-  /* allow scrolling */
-  html, body {
-    overflow-y: auto;
-    height: auto;
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
   }
 
   .bg-image3 {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    display: block;
-    margin: 20px auto;
-    width: 90vw;
-    height: auto;
+    width: 85vw;
+    margin: 10px auto;
   }
 
   .content-box2 {
-    position: relative;
-    bottom: auto;
-    left: 0;
-    margin: 10px auto;
     width: 90vw;
-    text-align: center;
+    margin: 5px 0;
   }
 
   .content-box {
-    position: relative;
-    bottom: auto;
-    left: 0;
-    margin: 10px auto 120px auto;
     width: 90vw;
-  }
-
-  .bg-image,
-  .bg-image2 {
-    display: none;
+    margin: 5px 0;
+    padding: 16px;
   }
 
   .top-strip {
-    height: 80px;
+    position: relative;
+    height: 70px;
   }
 
   .strip-track img {
-    height: 80px;
+    height: 70px;
   }
 }
  
