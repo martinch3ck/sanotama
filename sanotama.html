@@ -31,6 +31,7 @@
 
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 body::before {
@@ -80,7 +81,17 @@ body::before {
       pointer-events: none;
     }
 
+    
+    html, body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-y;
+      -ms-touch-action: pan-y;
+    }
 
+
+    
 body::after {
   content: "";
   position: fixed;
@@ -155,32 +166,8 @@ z-index: -1;
     transform: translateX(-50%);
   }
 }
+ 
 
-    @media (max-width: 600px) {
-
-  .content-box,
-  .content-box2 {
-    width: 340px; 
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .bg-image3 {
-    width: 90vw; 
-    height: auto;  
-  }
-
-  .bg-image,
-  .bg-image2 {
-    width: 80vw;
-    height: auto;
-  }
-
-  body {
-    overflow-y: auto;
-  }
-}
-    
 </style>
 </html>
 <body>
