@@ -12,6 +12,15 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      height: 100%;
+      font-family: courier, helvetica;
+    }
+
+
     .submit-link {
       color: #000000;
       text-decoration: none;
@@ -82,14 +91,6 @@ body::before {
     }
 
     
-    html, body {
-      overflow-x: hidden;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      touch-action: pan-y;
-      -ms-touch-action: pan-y;
-    }
-
 
     
 body::after {
